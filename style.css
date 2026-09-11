@@ -7,6 +7,17 @@ body{
   max-width:100%;
   height: auto;
 }
+.photos{
+  width:100%;
+  overflow-s:auto;
+}
+.photos table{
+  margin: auto;
+}
+.photos img{
+  width:200px;
+  height: auto;
+}
 .mytext{
   white-space: pre-wrap;
   overflow-wrap: break-word;
