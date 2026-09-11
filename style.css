@@ -8,21 +8,72 @@ body{
   height: auto;
 }
 .photos{
+  dispaly: flex;
   width:100%;
-  overflow-s:auto;
+  max-width:100%;
+  gap:15px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  padding:10px 5px 20px;
+  box-sizing:border-box;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+.person{
+  flex 0 0 180px;
+  width:200px;
+  max-width:200px;
+  text-align: center;
+  box-sizing: border-box;
 }
 .photos table{
-  margin: auto;
+  width: max-content;
+  max-width: none;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 15px 0;
+}
+.photos table td,
+.photos table th{
+  width: 200px;
+  min-width: 180px;
+  padding: 5px;
+  text-align: center;
+}
+.photos table img{
+  display: block;
+  width: 200px;
+  max-width: 200px;
+  height:auto;
+  margin: 10px auto;
 }
 .photos img{
+  display: block;
   width:200px;
   height: auto;
+  margin: 10px auto 0;
+  object-fit: contain;
 }
 .mytext{
+  max-width: 100%;
   white-space: pre-wrap;
   overflow-wrap: break-word;
-  max-width:100%;
+  overflow-x:auto;
 }
 table{
   max-width:100%
+}
+pre{
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+  height: auto;
 }
