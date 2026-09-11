@@ -11,7 +11,7 @@ body{
   dispaly: flex;
   width:100%;
   max-width:100%;
-  gap:15px;
+  gap:20px;
   overflow-x:auto;
   overflow-y:hidden;
   padding:10px 5px 20px;
@@ -20,9 +20,9 @@ body{
   overscroll-behavior-x: contain;
 }
 .person{
-  flex 0 0 180px;
-  width:200px;
-  max-width:200px;
+  flex 0 0 220px;
+  width:220px;
+  max-width:220px;
   text-align: center;
   box-sizing: border-box;
 }
@@ -31,25 +31,26 @@ body{
   max-width: none;
   margin: 0;
   border-collapse: separate;
-  border-spacing: 15px 0;
+  border-spacing: 20px 0;
 }
 .photos table td,
 .photos table th{
-  width: 200px;
-  min-width: 180px;
+  width: 220px;
+  min-width: 220px;
   padding: 5px;
   text-align: center;
 }
 .photos table img{
   display: block;
-  width: 200px;
-  max-width: 200px;
+  width: 220px;
+  max-width: 220px;
   height:auto;
   margin: 10px auto;
 }
 .photos img{
   display: block;
-  width:200px;
+  width:220px;
+  max-width: 220px;
   height: auto;
   margin: 10px auto 0;
   object-fit: contain;
@@ -76,4 +77,24 @@ pre{
 img{
   max-width: 100%;
   height: auto;
+}
+@media(max-width: 600px){
+  .person{
+    flex 0 0 20px;
+    width:200px;
+    max-width:200px;
+  }
+  .persom img{
+    width: 200px;
+    max-width: 200px;
+  }
+    .photox table td,
+    .photos table th{
+      width: 200px;
+      min-width: 200px;
+    }
+  .photos table img{
+      width: 200px;
+      max-width: 200px;
+  }
 }
