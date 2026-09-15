@@ -97,4 +97,46 @@ img{
       width: 200px;
       max-width: 200px;
   }
+
+  .button{
+    dispaly: inline-block;
+    padding: 13px 26px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 12px;
+    background: linear-gradient(
+      90deg;
+      #0645ad,
+      #6a5acd,
+      #a855f7,
+      #0645ad
+      );
+    background-size: 300% 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition:
+      transform 0.3 ease,
+      box-shadow 0.3 ease;
+    animation: gradientMove 5s ease infinite;
+  }
+  .button: hover{
+    transform: translateY(-4px) scale(1.04);
+    box-shadow:
+      0 8px 25px rgba(106,90,205,0.4);
+  }
+  .button: active{
+    transform: scale(0.97);
+  }
+  @keyframes gradientMove{
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+  }
 }
