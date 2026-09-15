@@ -8,7 +8,7 @@ body{
   height: auto;
 }
 .photos{
-  dispaly: flex;
+  display: flex;
   width:100%;
   max-width:100%;
   gap:20px;
@@ -20,7 +20,7 @@ body{
   overscroll-behavior-x: contain;
 }
 .person{
-  flex 0 0 220px;
+  flex: 0 0 220px;
   width:220px;
   max-width:220px;
   text-align: center;
@@ -84,11 +84,11 @@ img{
     width:200px;
     max-width:200px;
   }
-  .persom img{
+  .person img{
     width: 200px;
     max-width: 200px;
   }
-    .photox table td,
+    .photos table td,
     .photos table th{
       width: 200px;
       min-width: 200px;
@@ -99,7 +99,7 @@ img{
   }
 }
   .button{
-    dispaly: inline-block;
+    display: inline-block;
     padding: 13px 26px;
     color: white;
     font-size: 17px;
@@ -107,7 +107,7 @@ img{
     text-decoration: none;
     border-radius: 12px;
     background: linear-gradient(
-      90deg;
+      90deg,
       #0645ad,
       #6a5acd,
       #a855f7,
@@ -120,12 +120,12 @@ img{
       box-shadow 0.3 ease;
     animation: gradientMove 5s ease infinite;
   }
-  .button: hover{
+  .button:hover{
     transform: translateY(-4px) scale(1.04);
     box-shadow:
       0 8px 25px rgba(106,90,205,0.4);
   }
-  .button: active{
+  .button:active{
     transform: scale(0.97);
   }
   @keyframes gradientMove{
