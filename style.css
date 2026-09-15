@@ -97,7 +97,7 @@ img{
       width: 200px;
       max-width: 200px;
   }
-
+}
   .button{
     dispaly: inline-block;
     padding: 13px 26px;
@@ -139,4 +139,3 @@ img{
       background-position: 0% 50%;
     }
   }
-}
