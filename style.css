@@ -8,9 +8,8 @@ body{
   height: auto;
 }
 .photos{
-  display: flex;
+  justify-content: center;
   width:100%;
-  max-width:100%;
   gap:20px;
   overflow-x:auto;
   overflow-y:hidden;
@@ -19,38 +18,34 @@ body{
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
 }
-.person{
-  flex: 0 0 220px;
-  width:220px;
-  max-width:220px;
-  text-align: center;
-  box-sizing: border-box;
+.photos table {
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 20px 0;
 }
-.photos table{
-  width: max-content;
-  max-width: none;
-  margin: 0;
-  border-collapse: separate;
-  border-spacing: 20px 0;
-}
+
 .photos table td,
-.photos table th{
-  width: 220px;
-  min-width: 220px;
-  padding: 5px;
-  text-align: center;
+.photos table th,
+.photos th,
+.photos td {
+    width: clamp(200px, 20vw, 350px);
+    min-width: clamp(200px, 20vw, 350px);
+    padding: 5px;
+    text-align: center;
 }
-.photos table img{
-  display: block;
-  width: 220px;
-  max-width: 220px;
-  height:auto;
-  margin: 10px auto;
+
+.photos table img {
+    display: block;
+    width: clamp(200px, 20vw, 350px);
+    min-width: clamp(200px, 20vw, 350px);
+    padding: 5px;
+    margin: 10px auto;
 }
+
 .photos img{
   display: block;
-  width:220px;
-  max-width: 220px;
+  width: clamp(200px, 20vw, 350px);
+  max-width: 100%;
   height: auto;
   margin: 10px auto 0;
   object-fit: contain;
@@ -78,26 +73,18 @@ img{
   max-width: 100%;
   height: auto;
 }
+
 @media(max-width: 600px){
-  .person{
-    flex 0 0 20px;
-    width:200px;
-    max-width:200px;
-  }
-  .person img{
+  .photos td,
+  .photos th {
     width: 200px;
-    max-width: 200px;
+    min-width: 200px;
   }
-    .photos table td,
-    .photos table th{
-      width: 200px;
-      min-width: 200px;
-    }
   .photos table img{
-      width: 200px;
-      max-width: 200px;
+    width: 200px;
   }
 }
+
   .button{
     display: inline-block;
     padding: 13px 26px;
@@ -118,24 +105,20 @@ img{
     transition:
       transform 0.3 ease,
       box-shadow 0.3 ease;
-    animation: gradientMove 5s ease infinite;
   }
-  .button:hover{
-    transform: translateY(-4px) scale(1.04);
-    box-shadow:
-      0 8px 25px rgba(106,90,205,0.4);
-  }
+    .button:hover {
+        transform: translateY(-4px) scale(1.04);
+        box-shadow: 0 8px 25px rgba(106,90,205,0.4);
+        animation: gradientMove 1s ease forwards;
+    }
   .button:active{
     transform: scale(0.97);
   }
   @keyframes gradientMove{
-    0%{
+    from{
       background-position: 0% 50%;
     }
-    50%{
+    to{
       background-position: 100% 50%;
-    }
-    100%{
-      background-position: 0% 50%;
     }
   }
