@@ -112,6 +112,7 @@ img{
         animation: gradientMove 1s ease forwards;
     }
   .button:active{
+    animation: gradientMove 0.4s ease;
     transform: scale(0.97);
   }
   @keyframes gradientMove{
